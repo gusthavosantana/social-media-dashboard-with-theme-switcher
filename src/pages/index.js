@@ -6,7 +6,7 @@ import Switcher from '../components/Switcher';
 import Card from '../components/Card';
 import SmallCard from '../components/SmallCard';
 import CardList from '../components/CardList';
-import { ThemeContext, themes } from '../src/Context/Theme';
+import { ThemeContext, themes } from '../Context/Theme';
 
 export default function Home() {
 
