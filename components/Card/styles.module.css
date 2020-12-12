@@ -1,0 +1,49 @@
+.container {
+    background-color: var(--dark-desaturated-blue-card-bg);
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 5px solid var(--facebook);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.value {
+    font-size: 3.5rem;
+    color: var(--white-text);
+    font-weight: bold;
+}
+
+.label {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue-text);
+    letter-spacing: 0.2rem;
+    margin-bottom: 1.3rem;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    grid-gap: 2px;
+    align-items: center;
+}
+
+.footerText {
+    font-size: 0.8rem;
+    color: var(--lime-green);
+    font-weight: bold;
+}
+
+.profileName {
+    font-size: 0.8rem;
+    color: var(--toggle-light);
+}
