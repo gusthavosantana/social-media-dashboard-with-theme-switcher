@@ -1,8 +1,10 @@
 import React from 'react';
-import styles from './styles.module.css';
+import { CardListContainer } from './styles.js';
 
 export default function CardList({ data, component: Component }) {
-    return <div className={styles.container}>
-        {data.map(current => <Component key={current.id} item={current} />)}
-    </div>;
+    return (
+        <CardListContainer>
+            {data.map(current => <Component key={current.id} item={current} />)}
+        </CardListContainer>
+    );
 }

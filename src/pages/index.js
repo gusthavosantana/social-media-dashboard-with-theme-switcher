@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import styles from '../styles/Home.module.css'
 
-import Switcher from '../components/Switcher';
+import Header from '../components/Header';
 import Card from '../components/Card';
 import SmallCard from '../components/SmallCard';
 import CardList from '../components/CardList';
+import Main from '../components/Main';
+import PageContainer from '../components/PageContainer';
 import { ThemeContext, themes } from '../Context/Theme';
 
 export default function Home() {
@@ -36,30 +37,20 @@ export default function Home() {
 
   return (
     <ThemeContext.Provider value={{ theme: currentTheme, toggleTheme }}>
-      <div className={styles.container} style={{ 
-          background: currentTheme.containerBackground,
-          color: currentTheme.containerColor
-        }}>
-        <Head>
-          <title>Frontmentor | Social Media Dashboard with Theme Switcher</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
-        <main className={styles.main}>
-          <header className={styles.header}>
-            <div>
-              <h1 className={styles.title}>Social Media Dashboard</h1>
-              <h4 className={styles.subtitle}>Total Followers: 23,004</h4>
-            </div>
-            <Switcher />
-          </header>
-          <div className={styles.content}>
+      <Head>
+        <title>Frontmentor | Social Media Dashboard with Theme Switcher</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <PageContainer>
+        <Main>
+          <Header title="Social Media Dashboard" subtitle="Total Followers: 23,004" />
+          <div>
             <CardList data={generalData} component={Card} />
             <h2>Overview - Today</h2>
             <CardList data={todayData} component={SmallCard} />
           </div>
-        </main>
-      </div>
+        </Main>
+      </PageContainer>
     </ThemeContext.Provider>
   )
 }
